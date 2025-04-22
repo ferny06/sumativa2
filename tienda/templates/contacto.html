@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .violet-card {
+        border-radius: 22px;
+        box-shadow: 0 6px 32px 0 rgba(124, 58, 237, 0.13), 0 1.5px 2.5px 0 rgba(124, 58, 237, 0.07);
+        border: 1.5px solid #e9d6ff;
+    }
+    .violet-btn {
+        background: linear-gradient(90deg, #a259e6 0%, #6d28d9 100%);
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 8px rgba(124, 58, 237, 0.13);
+        transition: background 0.2s;
+    }
+    .violet-btn:hover {
+        background: linear-gradient(90deg, #6d28d9 0%, #a259e6 100%);
+        color: #fff;
+    }
+    .violet-label {
+        color: #212529;
+        font-weight: 500;
+    }
+    .violet-title {
+        color: #212529;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .violet-input, .violet-input:focus {
+        background: #fff;
+        color: #212529;
+        border: 1.5px solid #e9d6ff;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+</style>
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card violet-card">
+                <div class="card-body p-4">
+                    <div class="text-center mb-4">
+                        <img src="{% static 'imagenes/logo.png' %}" alt="Violet Store Logo" width="60" height="60" class="mb-3">
+                        <h3 class="mb-3 violet-title">Formulario de Contacto</h3>
+                        <p class="text-muted">Rellena los siguientes datos:</p>
+                    </div>
+                    <form action="/enviar-mensaje" method="POST" autocomplete="off">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label violet-label">Nombre completo</label>
+                            <input type="text" class="form-control violet-input" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label violet-label">Correo electrónico</label>
+                            <input type="email" class="form-control violet-input" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label violet-label">Teléfono</label>
+                            <input type="text" class="form-control violet-input" id="telefono" name="telefono">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="pais" class="form-label violet-label">País</label>
+                                <input type="text" class="form-control violet-input" id="pais" name="pais" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="ciudad" class="form-label violet-label">Ciudad</label>
+                                <input type="text" class="form-control violet-input" id="ciudad" name="ciudad" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label violet-label">Mensaje</label>
+                            <textarea class="form-control violet-input" id="mensaje" name="mensaje" rows="4" required></textarea>
+                        </div>
+                        <div class="d-grid gap-2 mb-3">
+                            <button type="submit" class="btn violet-btn btn-lg">Envíanos tu Comentario</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

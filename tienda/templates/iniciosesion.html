@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+      <div class="container mt-3">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow">
+              <div class="card-body p-4">
+                <div class="text-center mb-4">
+                  <img src="{% static 'imagenes/logo.png' %}" alt="VioletStore Logo" width="72" height="72" class="mb-3">
+                  <h3 class="mb-3">Inicia sesión en VioletStore</h3>
+                  <p class="text-muted">Ingresa tus credenciales para acceder a tu cuenta</p>
+                </div>
+                
+                {% if error %}
+                  <div class="alert alert-danger text-center">{{ error }}</div>
+                {% endif %}
+                <form method="post" action="">
+                  {% csrf_token %}
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Usuario o Correo electrónico</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="usuario o correo" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="••••••••" required>
+                    <div class="form-text text-end">
+                      <a href="#" class="btn btn-primary">¿Olvidaste tu contraseña?</a>
+                    </div>
+                  </div>
+                  <div class="d-grid gap-2 mb-3">
+                    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                  </div>
+                  <div class="text-center">
+                    <p class="mb-0">¿No tienes una cuenta?</p>
+                    <a href="{% url 'tienda:registrate' %}" class="btn btn-primary">Regístrate</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+[
+  {
+    "model": "tienda.producto",
+    "pk": 1,
+    "fields": {
+      "nombre": "Polera básica oferta",
+      "descripcion": "Polera de algodón en descuento.",
+      "precio": "7990.00",
+      "precio_original": "9990.00",
+      "precio_descuento": "7990.00",
+      "es_descuento": true,
+      "imagen": "productos/polera_basica.jpg",
+      "categoria": "blusas"
+    }
+  },
+  {
+    "model": "tienda.producto",
+    "pk": 2,
+    "fields": {
+      "nombre": "Falda flores oferta",
+      "descripcion": "Falda estampada con flores, precio especial.",
+      "precio": "10990.00",
+      "precio_original": "13990.00",
+      "precio_descuento": "10990.00",
+      "es_descuento": true,
+      "imagen": "productos/falda_flores.jpg",
+      "categoria": "faldas"
+    }
+  },
+  {
+    "model": "tienda.producto",
+    "pk": 3,
+    "fields": {
+      "nombre": "Pantalón jogger oferta",
+      "descripcion": "Jogger cómodo, ideal para el día a día.",
+      "precio": "12990.00",
+      "precio_original": "17990.00",
+      "precio_descuento": "12990.00",
+      "es_descuento": true,
+      "imagen": "productos/jogger.jpg",
+      "categoria": "pantalones"
+    }
+  },
+  {
+    "model": "tienda.producto",
+    "pk": 4,
+    "fields": {
+      "nombre": "Polerón oversize oferta",
+      "descripcion": "Polerón oversize con 20% de descuento.",
+      "precio": "15990.00",
+      "precio_original": "19990.00",
+      "precio_descuento": "15990.00",
+      "es_descuento": true,
+      "imagen": "productos/poleron_oversize.jpg",
+      "categoria": "novedades"
+    }
+  }
+]
