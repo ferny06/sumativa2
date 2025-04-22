@@ -1,0 +1,58 @@
+[
+  {
+    "model": "tienda.producto",
+    "pk": 5,
+    "fields": {
+      "nombre": "Polera manga larga básica",
+      "descripcion": "Polera de algodón manga larga, ideal para entretiempo.",
+      "precio": "10990.00",
+      "precio_original": null,
+      "precio_descuento": null,
+      "es_descuento": false,
+      "imagen": "productos/polera_manga_larga.jpg",
+      "categoria": "blusas"
+    }
+  },
+  {
+    "model": "tienda.producto",
+    "pk": 6,
+    "fields": {
+      "nombre": "Falda midi plisada",
+      "descripcion": "Falda midi plisada color celeste.",
+      "precio": "13990.00",
+      "precio_original": null,
+      "precio_descuento": null,
+      "es_descuento": false,
+      "imagen": "productos/falda_midi.jpg",
+      "categoria": "faldas"
+    }
+  },
+  {
+    "model": "tienda.producto",
+    "pk": 7,
+    "fields": {
+      "nombre": "Pantalón skinny negro",
+      "descripcion": "Pantalón ajustado negro, clásico y versátil.",
+      "precio": "15990.00",
+      "precio_original": null,
+      "precio_descuento": null,
+      "es_descuento": false,
+      "imagen": "productos/pantalon_skinny.jpg",
+      "categoria": "pantalones"
+    }
+  },
+  {
+    "model": "tienda.producto",
+    "pk": 8,
+    "fields": {
+      "nombre": "Chaqueta denim corta",
+      "descripcion": "Chaqueta de mezclilla corta para primavera.",
+      "precio": "21990.00",
+      "precio_original": null,
+      "precio_descuento": null,
+      "es_descuento": false,
+      "imagen": "productos/chaqueta_denim.jpg",
+      "categoria": "novedades"
+    }
+  }
+]
