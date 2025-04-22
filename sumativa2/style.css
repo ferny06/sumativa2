@@ -1,0 +1,118 @@
+<style>
+    * {
+        font-family: monospace;
+    }
+    
+    body {
+        background-color: #f5f5f5;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    
+    a {
+        color: rgb(255, 253, 253);
+        text-decoration: none;
+        padding: 5px;
+    }
+    
+    a:hover {
+        background-color: hsl(265, 78%, 73%);
+        color: rgb(254, 254, 254);
+        border-radius: 16px;
+    }
+
+    .navbar {
+        background-color: hsl(265, 68%, 83%) !important;
+    }
+
+    .navbar a {
+        color: white;
+    }
+
+    .btn-primary {
+        color: #ffffff;
+        background-color: hsl(265, 68%, 83%);
+        border-color: #ffffff;
+    }
+
+    .btn-primary:hover {
+        background-color: hsl(265, 78%, 73%);
+        border-color: #ffffff;
+    }
+    
+    
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        background: white;
+        border-radius: 8px;
+        border: none;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 4px 8px rgba(106, 13, 173, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(106, 13, 173, 0.2);
+        z-index: 10;
+    }
+    
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to right, hsl(265, 68%, 83%), hsl(265, 78%, 73%));
+        transform: translateY(-4px);
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover::before {
+        transform: translateY(0);
+    }
+    
+    .card-img-top {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover .card-img-top {
+        transform: scale(1.05);
+    }
+
+    h1 img {
+        vertical-align: middle;
+    }
+
+    .footer-custom {
+        background-color: hsl(265, 68%, 83%); 
+        color: #ffffff;
+    }
+
+    .boton-lila {
+        color: #ffffff;
+        background-color: hsl(265, 68%, 83%);
+        border-color: #ffffff;
+    }
+    
+</style>
